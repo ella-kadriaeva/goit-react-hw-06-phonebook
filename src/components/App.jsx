@@ -1,9 +1,12 @@
+import { createStore, combineReducers } from 'redux';
+
 import { useState, useEffect } from 'react';
 import ContactForm from './ContactForm/ContactForm';
 import Container from './Container/Container';
 import Filter from './Filter/Filter';
 import ContactList from './ContactList/ContactList';
 import { nanoid } from 'nanoid';
+
 const defaultContacts = [
   { id: 'id-1', name: 'Rosie Simpson', number: '459-12-56' },
   { id: 'id-2', name: 'Hermione Kline', number: '443-89-12' },
