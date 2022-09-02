@@ -13,12 +13,15 @@ import storage from 'redux-persist/lib/storage';
 import filter from './filter';
 import contacts from './contacts';
 
-const persistConfig = {
-  key: 'root',
+const persistContactsConfig = {
+  key: 'contacts',
   version: 1,
   storage,
 };
-const persistedContactsReducer = persistReducer(persistConfig, contacts);
+const persistedContactsReducer = persistReducer(
+  persistContactsConfig,
+  contacts
+);
 export const store = configureStore({
   reducer: {
     filter,
