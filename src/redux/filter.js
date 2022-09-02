@@ -1,10 +1,10 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-  value: 'ddd',
+  value: '',
 };
 
-export const counterSlice = createSlice({
+export const filterSlice = createSlice({
   name: 'filter',
   initialState,
   reducers: {
@@ -14,6 +14,6 @@ export const counterSlice = createSlice({
   },
 });
 
-export const { setFilter } = counterSlice.actions;
+export const { setFilter } = filterSlice.actions;
 
-export default counterSlice.reducer;
+export default filterSlice.reducer;
